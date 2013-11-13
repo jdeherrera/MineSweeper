@@ -1,0 +1,24 @@
+.game-item {
+    height: 40px;
+    width: 40px;
+    border: solid 1px #000000;
+    background-color: silver;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.game-item:hover {
+    cursor: pointer;
+}
+
+.flagged {
+    background-color: lightblue;
+}
+
+.mine {
+    background-color: red;
+}
+
+.count-0 {
+    background-color: whitesmoke;
+}
