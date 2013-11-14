@@ -25,7 +25,7 @@
         bodyEl.addEventListener('contextmenu', onRightMouse);
     }
     else {
-        throw Error('No body element found! Please check your HTML!')
+        throw Error('No body element found! Please check your HTML!');
     }
 
 
@@ -75,7 +75,7 @@
 
             el.className = classList.join(' ');
         }
-    }
+    };
 
     GameItem.prototype.setCount = function(count) {
         var el = this.getElement();
@@ -83,7 +83,7 @@
         el.innerText = count;
         el.className += ' count-' + count;
         this.adjacentMineCount = count;
-    }
+    };
 
 
     // --- Initialization --- //
@@ -124,7 +124,7 @@
             for (j = 0; j < NUM_COLS; j++) {
                 row = document.createElement('tr');
 
-                for (var i = 0; i < NUM_COLS; i++) {
+                for (i = 0; i < NUM_COLS; i++) {
                     gameItem = new GameItem(itemIndex++);
                     gameItems.push(gameItem);
 
@@ -273,15 +273,15 @@
     }
 
     function hasMine(el) {
-        var hasMine = false,
+        var found = false,
             index;
 
         if (el) {
             index = parseInt(el.getAttribute('index'), 10);
-            hasMine = arrayHasItem(mineIndexes, index);
+            found = arrayHasItem(mineIndexes, index);
         }
 
-        return hasMine;
+        return found;
     }
 
     function revealMines() {
