@@ -80,7 +80,7 @@
     GameItem.prototype.setCount = function(count) {
         var el = this.getElement();
 
-        el.innerText = count;
+        el.innerText = count || '';
         el.className += ' count-' + count;
         this.adjacentMineCount = count;
     };
